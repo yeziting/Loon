@@ -1,0 +1,25 @@
+#!name = 韩剧TV
+#!desc = 移除开屏、首页轮播图、播放详情页底部和视频片头广告
+#!author = 树先生
+
+[Rule]
+DOMAIN,mi.gdt.qq.com,REJECT
+DOMAIN,adsmind.ugdtimg.com,REJECT
+DOMAIN,pgdt.ugdtimg.com,REJECT
+DOMAIN,v2mi.gdt.qq.com,REJECT
+DOMAIN,da.bridgeturbo.com,REJECT
+DOMAIN,adx-os.bridgeturbo.com,REJECT
+DOMAIN,adx-bj.anythinktech.com,REJECT
+DOMAIN,mobads.baidu.com,REJECT
+
+> 韩剧TV
+# hostname = gfp.veta.naver.com, api.hanju.koudaibaobao.com
+^https?:\/\/gfp\.veta\.naver\.com\/adcall\? reject
+^https?:\/\/api\.hanju\.koudaibaobao\.com\/api\/carp\/kp\? reject
+
+
+# =====================================
+# MITM：中间人攻击，解密/跳过相关域名的内容，"-"开头为跳过
+# =====================================
+[MITM]
+hostname = mi.gdt.qq.com, gfp.veta.naver.com, api.hanju.koudaibaobao.com
