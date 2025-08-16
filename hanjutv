@@ -1,5 +1,6 @@
 #!name = 韩剧TV
 #!desc = 移除开屏、首页轮播图、播放详情页底部和视频片头广告
+#!rule-details=韩剧tv
 #!author = 树先生
 
 [Rule]
